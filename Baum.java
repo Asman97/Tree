@@ -1,6 +1,8 @@
 
 import java.util.Scanner;
 
+import javax.sound.sampled.Line;
+
 public class Baum {
 
   public static void main(String[] args) {
@@ -14,15 +16,18 @@ public class Baum {
       int b;
       int c;
       // creating a loop for rows
+
+
       for (a = 1; a <= height; a++) {
 
         // if first line (a==1) drawTip()
         // else draw leafRow() (stuff below)
+    
+        
         for (c = 1; c <= height - a; c++) {
           System.out.print(" ");
         }
-
-
+        
 
         for (b = 1; b <= a; b++) {
           System.out.print("*");
@@ -35,6 +40,8 @@ public class Baum {
         System.out.println();
 
       }
+
+       
 
       // Creating if statement for trunk of tree when height <= 5
       if (height <= 5) {
@@ -75,6 +82,11 @@ public class Baum {
       }
     }
 
+  }
+  private static void drawTip(int[] height) {
+    if (height[] index == 0){
+      System.out.print("-");
+    }
   }
 
 }
