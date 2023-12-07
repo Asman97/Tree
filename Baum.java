@@ -23,10 +23,11 @@ public class Baum {
         // output: eingabe y/n
         // scanner -> get next
         // input == y -> restart should be true
+        System.out.println();
         System.out.println("Continue? Yes or No?");
         
         String input = getNextUserInput();
-        boolean isYes = input.equals("Yes");
+        boolean isYes = input.equalsIgnoreCase("Yes") || input.equalsIgnoreCase("Y") || input.equalsIgnoreCase("Ja") || input.equalsIgnoreCase("J");
         return isYes;
 
         // return getNextUserInput() == "y";
@@ -38,10 +39,8 @@ public class Baum {
   }
 
   /*
-   * public static - can be accessed from within the class as well as outside the
-   * class.
-   * private static - can be access from within the class only.
-   */
+   * public static - can be accessed from within the class as well as outside the class.
+   * private static - can be accessed from within the class only.*/
 
   // Method that draws spaces depending on height
 
@@ -65,6 +64,7 @@ public class Baum {
 
     if (!_scanner.hasNextInt()) {
       _scanner.nextLine(); // clears the invalid input
+      System.out.println();
       System.out.println("Please enter a number");
       return;
     }
