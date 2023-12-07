@@ -35,7 +35,7 @@ public class Baum {
   }
 
   private static String getNextUserInput(){
-    return _scanner.next();
+    return _scanner.nextLine();
   }
 
   /*
@@ -63,7 +63,8 @@ public class Baum {
     System.out.print("Enter the height of tree, it should contain numbers from 1 to 35: ");
 
     if (!_scanner.hasNextInt()) {
-      _scanner.nextLine(); // clears the invalid input
+      _scanner.nextLine(); // clears the invalid input      
+
       System.out.println();
       System.out.println("Please enter a number");
       return;
